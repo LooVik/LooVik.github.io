@@ -344,11 +344,11 @@ h3 > i,
 
 .hero h1 {
   font-family: var(--font-hero);
-  font-size: clamp(2.35rem, 5.8vw, 3.85rem);
+  font-size: clamp(1.85rem, 5vw, 3.1rem);
   font-weight: 800;
-  line-height: 1.06;
+  line-height: 1.1;
   letter-spacing: -0.04em;
-  margin: 0 0 1rem;
+  margin: 0 0 0.75rem;
 }
 
 .hero h1 .gradient-text {
@@ -359,10 +359,11 @@ h3 > i,
 }
 
 .hero-lead {
-  font-size: 1.05rem;
+  font-size: 0.98rem;
   color: var(--text-muted);
-  max-width: 34rem;
-  margin: 0 0 1.75rem;
+  max-width: 32rem;
+  line-height: 1.5;
+  margin: 0 0 1.5rem;
 }
 
 .hero-actions {
@@ -605,7 +606,7 @@ h3 > i,
 
 /* Sections */
 .section {
-  padding: 4rem 0;
+  padding: 3.25rem 0;
   position: relative;
   z-index: 1;
 }
@@ -660,29 +661,31 @@ h3 > i,
   color: transparent;
 }
 
-.section-header p {
+.section-header p,
+.work-intro {
   color: var(--text-muted);
   margin: 0;
-  max-width: 36rem;
+  max-width: 32rem;
+  font-size: 0.95rem;
+  line-height: 1.5;
 }
 
-.work-confidential-note {
-  display: inline-flex;
-  align-items: center;
-  gap: 0.45rem;
-  margin-top: 0.85rem !important;
-  font-size: 0.88rem;
-  color: var(--text-muted);
-  padding: 0.55rem 0.9rem;
-  border-radius: 8px;
-  border: 1px solid var(--border);
-  background: var(--btn-ghost-bg);
-  max-width: 100%;
+.work-nda {
+  display: block;
+  margin-top: 0.35rem;
+  font-size: 0.85rem;
+  opacity: 0.85;
 }
 
-.work-confidential-note i {
-  color: var(--accent-cyan-readable, var(--accent-cyan));
-  flex-shrink: 0;
+@media (min-width: 640px) {
+  .work-nda {
+    display: inline;
+    margin-top: 0;
+  }
+
+  .work-nda::before {
+    content: " · ";
+  }
 }
 
 .section-alt {
@@ -717,14 +720,18 @@ h3 > i,
 
 .about-tagline {
   color: var(--text-muted);
-  margin: 0 0 1.25rem;
-  max-width: 36rem;
-  line-height: 1.6;
+  margin: 0 0 0.85rem;
+  max-width: 32rem;
+  font-size: 0.95rem;
+  line-height: 1.5;
 }
 
 .about-text p {
   color: var(--text-muted);
-  margin: 0 0 1.15rem;
+  margin: 0;
+  font-size: 0.95rem;
+  line-height: 1.55;
+  max-width: 36rem;
 }
 
 .about-text p:last-child {
@@ -812,7 +819,8 @@ h3 > i,
 .timeline-item p {
   margin: 0;
   color: var(--text-muted);
-  font-size: 0.92rem;
+  font-size: 0.9rem;
+  line-height: 1.5;
 }
 
 /* Skills */
@@ -1012,8 +1020,9 @@ h3 > i,
 }
 
 .project-body p {
-  margin: 0 0 1rem;
-  font-size: 0.88rem;
+  margin: 0 0 0.85rem;
+  font-size: 0.86rem;
+  line-height: 1.45;
   color: var(--text-muted);
   flex: 1;
 }
@@ -1163,6 +1172,18 @@ h3 > i,
 }
 
 @media (max-width: 768px) {
+  .section {
+    padding: 2.75rem 0;
+  }
+
+  .section-header {
+    margin-bottom: 1.5rem;
+  }
+
+  .hero {
+    padding-bottom: 2.25rem;
+  }
+
   .nav-toggle {
     display: block;
   }
