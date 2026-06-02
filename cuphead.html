@@ -1,45 +1,106 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="dark">
   <head>
-    <title>MugHead(Cuphead Demake Version)</title>
-		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-		<link rel="stylesheet" href="css/main.css" />
-		<noscript><link rel="stylesheet" href="css/noscript.css" /></noscript>
-	</head>
-  <body class="is-preload">
->
+    <script>
+      (function () {
+        var key = "portfolio-theme";
+        var saved = localStorage.getItem(key);
+        var theme =
+          saved ||
+          (window.matchMedia("(prefers-color-scheme: light)").matches ? "light" : "dark");
+        document.documentElement.setAttribute("data-theme", theme);
+      })();
+    </script>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>MugHead · LooVik Portfolio</title>
+    <link rel="icon" href="assets/favicon.svg" type="image/svg+xml" />
+    <link rel="icon" href="assets/favicon.ico" sizes="any" />
+    <link rel="icon" type="image/png" href="assets/favicon-32.png" sizes="32x32" />
+    <link rel="apple-touch-icon" href="assets/apple-touch-icon.png" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,600;12..96,700;12..96,800&family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700&family=Orbitron:wght@600;700&family=Outfit:wght@600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
+    />
+    <link href="css/portfolio.css" rel="stylesheet" />
+    <link href="css/project-page.css" rel="stylesheet" />
+  </head>
+  <body>
+    <header class="site-nav site-nav--project" role="banner">
+      <div class="container">
+        <a class="nav-brand" href="index.html">LooVik</a>
+        <a class="nav-back-work" href="index.html#work">
+          <i class="bi bi-grid" aria-hidden="true"></i> All projects
+        </a>
+        <button
+          class="theme-toggle"
+          type="button"
+          id="theme-toggle"
+          aria-label="Switch to light mode"
+          title="Toggle light / dark mode"
+        >
+          <i class="bi bi-sun-fill icon-sun" aria-hidden="true"></i>
+          <i class="bi bi-moon-stars-fill icon-moon" aria-hidden="true"></i>
+        </button>
+      </div>
+    </header>
 
-		<!-- Header -->
-			<header id="header">
-				<a href="index.html" class="title">LooVik Wong</a>
-				<nav>
-					<ul>
-						<li><a href="index.html">HOME</a></li>
-						<!---li><a href="generic.html" class="active">My Experiences</a></!---li>
-						<!----li><a href="elements.html">Elements</a></!--li-->
-					</ul>
-				</nav>
-			</header>
-      <!-- Wrapper -->
-      			<div id="wrapper">
+    <main class="project-page">
+      <article class="project-main">
+        <a class="project-back" href="index.html#work">
+          <i class="bi bi-arrow-left" aria-hidden="true"></i> Back to portfolio
+        </a>
+        <header class="project-header">
+          <div class="project-tags">
+            <span class="project-tag">Demake</span>
+            <span class="project-tag">Action</span>
+            <span class="project-tag">Game jam</span>
+          </div>
+          <h1>MugHead</h1>
+          <p class="project-lead">Cuphead-inspired boss fight demake with multi-phase combat.</p>
+        </header>
+        <div class="project-media">
+          <video controls playsinline poster="assets/img/portfolio/fullsize/MugHead.png">
+            <source src="assets/videos/Cuphead.mp4" type="video/mp4" />
+          </video>
+        </div>
+        <div class="project-body">
+          <p>
+            An Atari 2600-style demake of the Floral Fury boss fight from Cuphead. The boss cycles
+            through phases with new attacks as health drops. The player has three lives with no
+            mid-fight pickups; defeating the boss awards score before it respawns tougher.
+          </p>
+          <p>Designed and built with five teammates during a two-week game jam.</p>
+        </div>
+        <div class="project-actions">
+          <a
+            class="btn btn-primary"
+            href="https://github.com/MarjutA-K/MugHead.git"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <i class="bi bi-github" aria-hidden="true"></i> View on GitHub
+          </a>
+          <a class="btn btn-ghost" href="index.html#work">
+            <i class="bi bi-collection" aria-hidden="true"></i> More projects
+          </a>
+        </div>
+      </article>
+    </main>
 
-      				<!-- Main -->
-      				<section id="main" class="wrapper">
-      					<div class="inner">
-      						<h1 class="major">MugHead(CupHead De-make)</h1>
-							<video width="100%" height="auto" controls>
-								<source src="assets/videos/Cuphead.mp4" type="video/mp4">
-							</video>
-                  <p>This video displays the atari 2600 demake of the floral fury boss fight from Cuphead.<p>
-						      <p>The boss fight has multiple phases which change based on boss health with different attacks
-						      for each phase. The player will have 3 total lives and no extra lives will drop during the entire boss fight. Once the boss is defeated, the player will gain score and the boss will
-						      respawn with different changes such as increase health and quicker attacks.</p>
-						      <p>This was designed and created with 5 others in a short 2 week game jam.</p>
-                  <p>Github code linked to the game code is provided below.</p>
-                  <li><a href="https://github.com/MarjutA-K/MugHead.git" class="button">Github Code</a></li>
-      					</div>
-      				</section>
-      			</div>
+    <footer class="project-footer">
+      <p>© <span id="year"></span> LooVik Wong · <a href="index.html">Portfolio</a></p>
+    </footer>
+    <script>
+      document.getElementById("year").textContent = new Date().getFullYear();
+    </script>
+    <script src="js/portfolio.js"></script>
+    <script src="js/project-page.js"></script>
   </body>
 </html>
