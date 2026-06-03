@@ -21,14 +21,30 @@
   function setActiveNav() {
     if (!navLinks.length) return;
 
-    const offset = (nav?.offsetHeight ?? 56) + 120;
-    const scrollPos = window.scrollY + offset;
-    let activeId = "";
+    const navHeight = nav?.offsetHeight ?? 56;
+    const scrollBottom = window.scrollY + window.innerHeight;
+    const pageBottom = document.documentElement.scrollHeight;
+    let activeId = sectionIds[0];
 
-    for (const id of sectionIds) {
-      const section = document.getElementById(id);
-      if (section && section.offsetTop <= scrollPos) {
-        activeId = id;
+    // Short last section (Contact): near page bottom, always highlight Contact
+    if (scrollBottom >= pageBottom - 48) {
+      activeId = sectionIds[sectionIds.length - 1];
+    } else {
+      const probe = window.scrollY + navHeight + window.innerHeight * 0.35;
+
+      for (const id of sectionIds) {
+        const section = document.getElementById(id);
+        if (!section) continue;
+
+        const top = section.offsetTop;
+        const bottom = top + section.offsetHeight;
+        if (probe >= top && probe < bottom) {
+          activeId = id;
+          break;
+        }
+        if (probe >= top) {
+          activeId = id;
+        }
       }
     }
 
