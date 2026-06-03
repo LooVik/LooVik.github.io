@@ -1,0 +1,132 @@
+/* LooVik — tweaks on top of Start Bootstrap Creative (keep the original feel) */
+
+html {
+  scroll-padding-top: 5rem;
+}
+
+.masthead .hero-tagline {
+  font-family: "Merriweather Sans", sans-serif;
+  font-size: 1.15rem;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.9);
+  margin-bottom: 0.5rem;
+}
+
+.masthead .hero-lead {
+  font-size: 1.05rem;
+  max-width: 36rem;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.masthead .hero-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  justify-content: center;
+}
+
+.masthead .btn-outline-light {
+  border-width: 2px;
+}
+
+.masthead .btn-outline-light:hover {
+  background: rgba(255, 255, 255, 0.15);
+}
+
+.about-facts {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.65rem;
+  justify-content: center;
+  margin-bottom: 1.5rem;
+}
+
+.about-fact {
+  font-family: "Merriweather Sans", sans-serif;
+  font-size: 0.8rem;
+  font-weight: 700;
+  padding: 0.4rem 0.85rem;
+  border-radius: 2rem;
+  border: 1px solid rgba(255, 255, 255, 0.35);
+  color: rgba(255, 255, 255, 0.9);
+  background: rgba(0, 0, 0, 0.12);
+}
+
+.skill-block {
+  padding: 1.25rem 0.5rem;
+}
+
+.skill-block .skill-icon {
+  font-size: 2.5rem;
+  color: #f4623a;
+  margin-bottom: 0.65rem;
+}
+
+.portfolio-section .section-intro {
+  max-width: 40rem;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+#portfolio .portfolio-box img {
+  object-fit: cover;
+  width: 100%;
+  aspect-ratio: 16 / 10;
+}
+
+.contact-links {
+  max-width: 52rem;
+  margin: 0 auto;
+}
+
+.contact-card {
+  display: block;
+  padding: 1.5rem 1rem;
+  border-radius: 0.5rem;
+  border: 1px solid #dee2e6;
+  background: #fff;
+  color: #212529;
+  text-decoration: none;
+  transition: border-color 0.2s ease, transform 0.2s ease, box-shadow 0.2s ease;
+  height: 100%;
+}
+
+.contact-card:hover {
+  color: #f4623a;
+  border-color: #f4623a;
+  transform: translateY(-3px);
+  box-shadow: 0 0.5rem 1rem rgba(244, 98, 58, 0.15);
+}
+
+.contact-card i {
+  font-size: 2rem;
+  color: #f4623a;
+  margin-bottom: 0.5rem;
+}
+
+.contact-card strong {
+  display: block;
+  font-family: "Merriweather Sans", sans-serif;
+  font-size: 0.95rem;
+  margin-bottom: 0.2rem;
+}
+
+.contact-card span {
+  font-size: 0.88rem;
+  color: #6c757d;
+}
+
+@media (max-width: 991.98px) {
+  .page-section {
+    padding: 5rem 0;
+  }
+
+  header.masthead {
+    min-height: auto;
+    padding-top: 6rem;
+    padding-bottom: 4rem;
+  }
+}

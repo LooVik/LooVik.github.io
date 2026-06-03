@@ -1,112 +1,72 @@
 <!DOCTYPE html>
-<html lang="en" data-theme="dark">
+<html lang="en">
   <head>
-    <script>
-      (function () {
-        var key = "portfolio-theme";
-        var saved = localStorage.getItem(key);
-        var theme =
-          saved ||
-          (window.matchMedia("(prefers-color-scheme: light)").matches ? "light" : "dark");
-        document.documentElement.setAttribute("data-theme", theme);
-      })();
-    </script>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Burglar Battle · LooVik Portfolio</title>
+    <title>Burglar Battle · LooVik</title>
     <link rel="icon" href="assets/favicon.svg" type="image/svg+xml" />
     <link rel="icon" href="assets/favicon.ico" sizes="any" />
-    <link rel="icon" type="image/png" href="assets/favicon-32.png" sizes="32x32" />
-    <link rel="apple-touch-icon" href="assets/apple-touch-icon.png" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,600;12..96,700;12..96,800&family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700&family=Orbitron:wght@600;700&family=Outfit:wght@600;700;800&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap"
       rel="stylesheet"
     />
-    <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
-    />
-    <link href="css/portfolio.css" rel="stylesheet" />
-    <link href="css/project-page.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" />
+    <link href="css/site.css" rel="stylesheet" />
   </head>
-  <body>
-    <header class="site-nav site-nav--project" role="banner">
+  <body class="project-page">
+    <header class="site-nav navbar navbar-expand-lg">
       <div class="container">
-        <a class="nav-brand" href="index.html">LooVik</a>
-        <a class="nav-back-work" href="index.html#work">
-          <i class="bi bi-grid" aria-hidden="true"></i> All projects
-        </a>
-        <button
-          class="theme-toggle"
-          type="button"
-          id="theme-toggle"
-          aria-label="Switch to light mode"
-          title="Toggle light / dark mode"
-        >
-          <i class="bi bi-sun-fill icon-sun" aria-hidden="true"></i>
-          <i class="bi bi-moon-stars-fill icon-moon" aria-hidden="true"></i>
-        </button>
+        <a class="site-brand" href="index.html">LooVik</a>
+        <a class="nav-link ms-auto fw-bold" href="index.html#work">All projects</a>
       </div>
     </header>
-
-    <main class="project-page">
-      <article class="project-main">
-        <a class="project-back" href="index.html#work">
-          <i class="bi bi-arrow-left" aria-hidden="true"></i> Back to portfolio
-        </a>
-        <header class="project-header">
-          <div class="project-tags">
-            <span class="project-tag">PS5</span>
-            <span class="project-tag">Unity</span>
-            <span class="project-tag">Team project</span>
-          </div>
-          <h1>Burglar Battle</h1>
-          <p class="project-lead">
-            A split-screen heist battle where two teams race to loot the vault first.
-          </p>
-        </header>
-        <div class="project-media">
-          <video controls playsinline poster="assets/img/portfolio/fullsize/battle.png">
-            <source src="assets/videos/Burglarbattle.mp4" type="video/mp4" />
-          </video>
+    <main class="project-main">
+      <a class="project-back" href="index.html#work"><i class="bi bi-arrow-left" aria-hidden="true"></i> Back to work</a>
+      <header>
+        <div class="project-tags">
+          <span class="project-tag">University</span>
+          <span class="project-tag">PS5</span>
+          <span class="project-tag">Unity</span>
         </div>
-        <div class="project-body">
-          <p>
-            Two teams of two skilled robbers compete in a split-screen heist. Players solve puzzles,
-            complete challenges, and evade monsters while racing to pull off the ultimate heist.
-            Built for PlayStation 5 with Unity.
-          </p>
-          <p>
-            Developed with up to 50 students at the University of the West of England, organised into
-            smaller production groups — a university console project with real pipeline constraints (not
-            commercial employment work).
-          </p>
-        </div>
-        <div class="project-actions">
-          <a
-            class="btn btn-primary"
-            href="https://github.com/GamesTech/CGD-22-23-BurglarBattle.git"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <i class="bi bi-github" aria-hidden="true"></i> View on GitHub
-          </a>
-          <a class="btn btn-ghost" href="index.html#work">
-            <i class="bi bi-collection" aria-hidden="true"></i> More projects
-          </a>
-        </div>
-      </article>
+        <h1>Burglar Battle</h1>
+        <p class="project-lead">Split-screen heist for PlayStation 5 — University of the West of England team project (~50 students).</p>
+      </header>
+      <div class="project-media">
+        <video controls playsinline poster="assets/img/portfolio/fullsize/battle.png">
+          <source src="assets/videos/Burglarbattle.mp4" type="video/mp4" />
+        </video>
+      </div>
+      <div class="project-body">
+        <p>
+          Two teams of robbers race to loot the vault first — puzzles, challenges, and monsters in a split-screen
+          heist built with Unity for PS5.
+        </p>
+        <p>
+          Developed at the University of the West of England in smaller groups within a large production. Not
+          commercial employment work.
+        </p>
+      </div>
+      <div class="project-actions">
+        <a
+          class="btn-loo btn-loo-primary"
+          href="https://github.com/GamesTech/CGD-22-23-BurglarBattle.git"
+          target="_blank"
+          rel="noopener noreferrer"
+          ><i class="bi bi-github" aria-hidden="true"></i> GitHub</a
+        >
+        <a class="btn-loo btn-loo-ghost" href="index.html#work">More projects</a>
+      </div>
     </main>
-
-    <footer class="project-footer">
-      <p>© <span id="year"></span> LooVik Wong · <a href="index.html">Portfolio</a></p>
+    <footer class="site-footer">
+      <div class="container">
+        <p>© <span id="year"></span> LooVik Wong</p>
+      </div>
     </footer>
     <script>
       document.getElementById("year").textContent = new Date().getFullYear();
     </script>
-    <script src="js/portfolio.js"></script>
-    <script src="js/project-page.js"></script>
   </body>
 </html>
