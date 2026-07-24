@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Games · Loo Vik</title>
+    <link rel="icon" href="assets/favicon.svg" type="image/svg+xml" />
+    <link rel="icon" href="assets/favicon.ico" sizes="any" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" />
+    <link href="css/site.css" rel="stylesheet" />
+    <script src="js/gate.js"></script>
+  </head>
+  <body class="project-page games-page">
+    <header class="site-nav navbar navbar-expand-lg">
+      <div class="container">
+        <a class="site-brand" href="index.html"><strong>Loo Vik</strong></a>
+        <a class="nav-link ms-auto fw-bold" href="index.html">Home</a>
+      </div>
+    </header>
+
+    <main class="games-page-main">
+      <a class="project-back" href="index.html#games"><i class="bi bi-arrow-left" aria-hidden="true"></i> Back home</a>
+
+      <header class="games-page-header">
+        <h1 class="games-page-title">Games</h1>
+        <p class="games-page-subtitle">Click on a game to read more.</p>
+      </header>
+
+      <section class="games-block" id="professional-games">
+        <h2 class="games-block__title">Professional Work</h2>
+        <p class="games-block__lead">Commercial Unity development at studio.</p>
+
+        <div class="games-tabs games-tabs--single" aria-label="Professional work engine">
+          <span class="games-tab is-active">Unity</span>
+        </div>
+
+        <div class="games-grid games-grid--catalog">
+          <article class="game-card game-card--badge-ongoing game-card--no-link" aria-disabled="true">
+            <span class="game-card__ongoing-badge">Ongoing</span>
+            <div class="game-card__thumb game-card__thumb--app-icon">
+              <img src="assets/img/pro/herogen-icon.jpg" alt="HeroGen 2 — mobile RPG" loading="lazy" />
+            </div>
+            <div class="game-card__body">
+              <span class="game-card__tag">Unity</span>
+              <h3>HeroGen 2</h3>
+              <p>
+                Mobile RPG remaster of HeroGen — expanded systems and a cleaner UI. Same studio IP, rebuilt for the
+                next release.
+              </p>
+              <span class="game-card__meta">Mobile</span>
+            </div>
+          </article>
+
+          <a class="game-card" href="cfc-fun-chinese.html">
+            <div class="game-card__thumb game-card__thumb--app-icon">
+              <img src="assets/img/pro/cfc-fun-chinese.jpg" alt="Fun with Chinese 2" loading="lazy" />
+            </div>
+            <div class="game-card__body">
+              <span class="game-card__tag">Unity</span>
+              <h3>Fun with Chinese 2</h3>
+              <p>C-for-Chinese@JC RPG — Naninovel storybooks and language-learning mini-games.</p>
+              <span class="game-card__meta">2024 · iOS &amp; Android</span>
+            </div>
+          </a>
+
+          <a class="game-card" href="bme-web-game.html">
+            <div class="game-card__thumb">
+              <img src="assets/img/pro/bme-kickstart.jpg" alt="BME Web Game" loading="lazy" />
+            </div>
+            <div class="game-card__body">
+              <span class="game-card__tag">Unity</span>
+              <h3>BME Web Game</h3>
+              <p>Game developer on a WebGL multiplayer platform — drawing, ElderCare Quest, and shared lobby systems.</p>
+              <span class="game-card__meta">2024 · WebGL</span>
+            </div>
+          </a>
+
+          <a class="game-card" href="innotech-sen.html">
+            <div class="game-card__thumb">
+              <img src="assets/img/pro/innotech-login.jpg" alt="InnoTech for SEN Students" loading="lazy" />
+            </div>
+            <div class="game-card__body">
+              <span class="game-card__tag">Unity</span>
+              <h3>InnoTech for SEN Students</h3>
+              <p>WebGL migration — Firebase REST auth, mini-game fixes, and browser stabilization.</p>
+              <span class="game-card__meta">2024 · WebGL</span>
+            </div>
+          </a>
+
+          <a class="game-card" href="play-house-webgl.html">
+            <div class="game-card__thumb">
+              <img src="assets/img/pro/playhouse-entrance.jpg" alt="Play House WebGL" loading="lazy" />
+            </div>
+            <div class="game-card__body">
+              <span class="game-card__tag">Unity</span>
+              <h3>Play House — WebGL</h3>
+              <p>Eight-theatre educational platform — Entrance, rhythm games, AI art, and more.</p>
+              <span class="game-card__meta">2024–2025 · WebGL</span>
+            </div>
+          </a>
+
+          <a class="game-card" href="play-house-mobile.html">
+            <div class="game-card__thumb game-card__thumb--empty" aria-hidden="true"></div>
+            <div class="game-card__body">
+              <span class="game-card__tag">Unity</span>
+              <h3>Play House Mobile App</h3>
+              <p>Unified iOS/Android app — Firebase SDK, Addressables, and touch rhythm gameplay.</p>
+              <span class="game-card__meta">2025–2026 · iOS &amp; Android</span>
+            </div>
+          </a>
+        </div>
+
+        <p class="games-block__empty is-hidden">
+          No professional projects listed yet — shipped studio work is often under NDA.
+        </p>
+      </section>
+
+      <section class="games-block" id="personal-games">
+        <h2 class="games-block__title">Personal Work</h2>
+        <p class="games-block__lead">University teams, game jams, and personal prototypes.</p>
+
+        <div class="games-tabs" role="tablist" aria-label="Personal work by engine">
+          <button type="button" class="games-tab is-active" role="tab" aria-selected="true" data-engine="unity">Unity</button>
+          <button type="button" class="games-tab" role="tab" aria-selected="false" data-engine="unreal">Unreal Engine</button>
+          <button type="button" class="games-tab" role="tab" aria-selected="false" data-engine="cpp">C++ / SFML</button>
+        </div>
+
+        <div class="games-subtabs" role="tablist" aria-label="Personal work by type">
+          <button type="button" class="games-subtab is-active" role="tab" aria-selected="true" data-category="all">All</button>
+          <button type="button" class="games-subtab" role="tab" aria-selected="false" data-category="personal">Personal</button>
+          <button type="button" class="games-subtab" role="tab" aria-selected="false" data-category="university">University</button>
+          <button type="button" class="games-subtab" role="tab" aria-selected="false" data-category="jam">Game jams</button>
+        </div>
+
+        <div class="games-grid games-grid--catalog">
+          <article class="game-card game-card--badge-ongoing game-card--no-link" data-engine="unity" data-category="personal ongoing" aria-disabled="true">
+            <span class="game-card__ongoing-badge">Ongoing</span>
+            <div class="game-card__thumb game-card__thumb--empty" aria-hidden="true"></div>
+            <div class="game-card__body">
+              <span class="game-card__tag">Unity</span>
+              <h3>War of Tank</h3>
+              <p>Tank prefabs and scripts in place — main scene still to rebuild.</p>
+              <span class="game-card__meta">PC</span>
+            </div>
+          </article>
+
+          <a class="game-card" href="battle.html" data-engine="unity" data-category="university team">
+            <div class="game-card__thumb">
+              <img src="assets/img/portfolio/fullsize/battle.png" alt="Burglar Battle" loading="lazy" />
+            </div>
+            <div class="game-card__body">
+              <span class="game-card__tag">Unity</span>
+              <h3>Burglar Battle</h3>
+              <p>Split-screen PS5 heist — level design (jail, underground) and VFX.</p>
+              <span class="game-card__meta">PS5</span>
+            </div>
+          </a>
+
+          <a class="game-card" href="city.html" data-engine="unity" data-category="university">
+            <div class="game-card__thumb">
+              <img src="assets/img/portfolio/fullsize/city.png" alt="CityGo" loading="lazy" />
+            </div>
+            <div class="game-card__body">
+              <span class="game-card__tag">Unity</span>
+              <h3>CityGo</h3>
+              <p>Final-year dissertation — live map SDK, Snake &amp; Whack-A-Mole mini-games for points and EXP.</p>
+              <span class="game-card__meta">Mobile</span>
+            </div>
+          </a>
+
+          <a class="game-card" href="old-school-fps.html" data-engine="unity" data-category="personal">
+            <div class="game-card__thumb">
+              <img src="assets/img/portfolio/fullsize/old-school-fps-card.png" alt="Old School FPS" loading="lazy" />
+            </div>
+            <div class="game-card__body">
+              <span class="game-card__tag">Unity</span>
+              <h3>Old School FPS</h3>
+              <p>Personal retro-style FPS — enemy AI, shooting, and keycard doors.</p>
+              <span class="game-card__meta">PC</span>
+            </div>
+          </a>
+
+          <a class="game-card" href="game-level-design.html" data-engine="unity" data-category="personal">
+            <div class="game-card__thumb game-card__thumb--empty" aria-hidden="true"></div>
+            <div class="game-card__body">
+              <span class="game-card__tag">Unity</span>
+              <h3>Game Level Design</h3>
+              <p>Personal HDRP level — CCTV screens, projection geometry, and trigger interactions.</p>
+              <span class="game-card__meta">PC</span>
+            </div>
+          </a>
+
+          <a class="game-card" href="cuphead.html" data-engine="unity" data-category="university jam team">
+            <div class="game-card__thumb">
+              <img src="assets/img/portfolio/fullsize/MugHead.png" alt="MugHead" loading="lazy" />
+            </div>
+            <div class="game-card__body">
+              <span class="game-card__tag">Unity</span>
+              <h3>MugHead</h3>
+              <p>Cuphead demake — phase 3 boss fight and boomerang object.</p>
+              <span class="game-card__meta">Atari 2600</span>
+            </div>
+          </a>
+
+          <a class="game-card" href="lockedin.html" data-engine="unity" data-category="university jam team">
+            <div class="game-card__thumb">
+              <img src="assets/img/portfolio/fullsize/locked.png" alt="LockedIn" loading="lazy" />
+            </div>
+            <div class="game-card__body">
+              <span class="game-card__tag">Unity</span>
+              <h3>LockedIn</h3>
+              <p>PSX horror jam — movement, sound, level design, and animation.</p>
+              <span class="game-card__meta">PC</span>
+            </div>
+          </a>
+
+          <a class="game-card" href="root.html" data-engine="unity" data-category="university jam team">
+            <div class="game-card__thumb">
+              <img src="assets/img/portfolio/fullsize/roots.png" alt="Root Odyssey" loading="lazy" />
+            </div>
+            <div class="game-card__body">
+              <span class="game-card__tag">Unity</span>
+              <h3>Root Odyssey</h3>
+              <p>GGJ — camera shake and post-processing on map scenes.</p>
+              <span class="game-card__meta">PC</span>
+            </div>
+          </a>
+
+          <a class="game-card" href="counter-battle.html" data-engine="unity" data-category="personal learning">
+            <div class="game-card__thumb">
+              <img
+                src="assets/img/portfolio/fullsize/counter-battle-card.jpg"
+                alt="Counter Battle — James Doyle Udemy multiplayer course"
+                loading="lazy"
+              />
+            </div>
+            <div class="game-card__body">
+              <span class="game-card__tag">Unity</span>
+              <h3>Counter Battle</h3>
+              <p>Learning exercise — Udemy multiplayer course project (not my own game).</p>
+              <span class="game-card__meta">PC</span>
+            </div>
+          </a>
+
+          <a class="game-card" href="unity-exterminator.html" data-engine="unity" data-category="personal learning">
+            <div class="game-card__thumb">
+              <img
+                src="assets/img/portfolio/fullsize/exterminator-card.jpg"
+                alt="Unity Exterminator — Jingtian Li Udemy mobile game course"
+                loading="lazy"
+              />
+            </div>
+            <div class="game-card__body">
+              <span class="game-card__tag">Unity</span>
+              <h3>Unity Exterminator</h3>
+              <p>Learning exercise — Udemy mobile shooter course project (not my own game).</p>
+              <span class="game-card__meta">Mobile</span>
+            </div>
+          </a>
+
+          <a class="game-card" href="natural.html" data-engine="unity" data-category="personal">
+            <div class="game-card__thumb">
+              <img src="assets/img/portfolio/fullsize/naturebg.png" alt="Natural Explorer" loading="lazy" />
+            </div>
+            <div class="game-card__body">
+              <span class="game-card__tag">Unity</span>
+              <h3>Natural Explorer</h3>
+              <p>Personal open-world nature exploration project.</p>
+              <span class="game-card__meta">PC</span>
+            </div>
+          </a>
+
+          <a class="game-card is-hidden" href="angrybird.html" data-engine="cpp" data-category="university">
+            <div class="game-card__thumb">
+              <img src="assets/img/portfolio/thumbnails/angrybird.jpg" alt="Angry Bird" loading="lazy" />
+            </div>
+            <div class="game-card__body">
+              <span class="game-card__tag">C++</span>
+              <h3>Angry Bird</h3>
+              <p>Physics launcher prototype in SFML.</p>
+              <span class="game-card__meta">PC</span>
+            </div>
+          </a>
+
+          <a class="game-card is-hidden" href="pong.html" data-engine="cpp" data-category="university">
+            <div class="game-card__thumb">
+              <img src="assets/img/portfolio/thumbnails/pong.jpg" alt="Pong" loading="lazy" />
+            </div>
+            <div class="game-card__body">
+              <span class="game-card__tag">C++</span>
+              <h3>Pong</h3>
+              <p>Classic arcade rebuild — collision and game states.</p>
+              <span class="game-card__meta">PC</span>
+            </div>
+          </a>
+
+          <a class="game-card is-hidden" href="whack.html" data-engine="cpp" data-category="university">
+            <div class="game-card__thumb">
+              <img src="assets/img/portfolio/thumbnails/whackamole.jpg" alt="Whack-A-Mole" loading="lazy" />
+            </div>
+            <div class="game-card__body">
+              <span class="game-card__tag">C++</span>
+              <h3>Whack-A-Mole</h3>
+              <p>Arcade timing and spawning in SFML.</p>
+              <span class="game-card__meta">PC</span>
+            </div>
+          </a>
+
+          <a class="game-card" href="ue5-blaster.html" data-engine="unreal" data-category="personal learning">
+            <div class="game-card__thumb">
+              <img
+                src="assets/img/portfolio/fullsize/ue5-blaster-card.jpg"
+                alt="UE5 Blaster — Stephen Ulibarri Udemy multiplayer shooter course"
+                loading="lazy"
+              />
+            </div>
+            <div class="game-card__body">
+              <span class="game-card__tag">Unreal 5</span>
+              <h3>UE5 Blaster</h3>
+              <p>Learning exercise — Udemy UE5 multiplayer shooter course project (not my own game).</p>
+              <span class="game-card__meta">PC</span>
+            </div>
+          </a>
+
+          <a class="game-card is-hidden" href="enemy-escape.html" data-engine="unreal" data-category="personal">
+            <div class="game-card__thumb">
+              <img src="assets/img/portfolio/unreal/enemy-escape-hero.png" alt="Enemy Escape" loading="lazy" />
+            </div>
+            <div class="game-card__body">
+              <span class="game-card__tag">Unreal 4</span>
+              <h3>Enemy Escape</h3>
+              <p>UE4 level design — timed escape from a chasing enemy through arenas and platforming.</p>
+              <span class="game-card__meta">PC</span>
+            </div>
+          </a>
+        </div>
+
+        <p class="games-block__empty is-hidden" data-empty-engine>
+          Nothing in this engine yet — Unreal portfolio work coming soon.
+        </p>
+        <p class="games-block__empty is-hidden" data-empty-category>
+          No projects in this category for the selected engine.
+        </p>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container">
+        <p>© <span id="year"></span> Loo Vik</p>
+      </div>
+    </footer>
+
+    <script src="js/site.js"></script>
+    <script>
+      document.getElementById("year").textContent = new Date().getFullYear();
+    </script>
+  </body>
+</html>

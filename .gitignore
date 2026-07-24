@@ -1,0 +1,25 @@
+# AI assistant config, skills and generated notes — local only
+.cursor/
+.claude/
+.aider*
+.continue/
+.windsurf/
+.roo/
+docs/superpowers/
+
+# Visual Studio / IDE
+.vs/
+.vscode/
+*.user
+*.suo
+
+# OS junk
+.DS_Store
+Thumbs.db
+
+# Local-only helper for the temporary password gate — not for publishing
+scripts/hash-password.html
+
+# Large source videos not referenced by any page — keep them local
+assets/videos/pro/bme-eldercare.mov
+assets/videos/pro/bme-game1.mov

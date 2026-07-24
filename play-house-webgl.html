@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Play House WebGL · LooVik</title>
+    <link rel="icon" href="assets/favicon.svg" type="image/svg+xml" />
+    <link rel="icon" href="assets/favicon.ico" sizes="any" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" />
+    <link href="css/site.css" rel="stylesheet" />
+    <script src="js/gate.js"></script>
+  </head>
+  <body class="project-page">
+    <header class="site-nav navbar navbar-expand-lg">
+      <div class="container">
+        <a class="site-brand" href="index.html">LooVik</a>
+        <a class="nav-link ms-auto fw-bold" href="games.html">All games</a>
+      </div>
+    </header>
+    <main class="project-main">
+      <a class="project-back" href="games.html#professional-games"><i class="bi bi-arrow-left" aria-hidden="true"></i> Back to games</a>
+      <header>
+        <div class="project-tags">
+          <span class="project-tag">Professional</span>
+          <span class="project-tag">Unity</span>
+          <span class="project-tag">WebGL</span>
+          <span class="project-tag">Education</span>
+        </div>
+        <h1>Play House — WebGL Platform</h1>
+        <p class="project-lead">A multi-experience educational web platform — one shared Entrance and eight interconnected Unity WebGL theatres.</p>
+      </header>
+      <div class="project-media">
+        <img src="assets/img/pro/playhouse-entrance.jpg" alt="Play House WebGL entrance map" loading="lazy" />
+      </div>
+      <div class="project-body">
+        <div class="project-meta">
+          <p><strong>Role:</strong> Unity WebGL Developer → Senior Unity Developer / Technical Project Lead</p>
+          <p><strong>Period:</strong> 2024–2025</p>
+          <p><strong>Platform:</strong> WebGL (browser)</p>
+          <p><strong>Technology:</strong> Unity, C#, WebGL, HTML/CSS/JavaScript, REST APIs, Socket.IO, Spine, Firebase/token auth, localization, CSV-driven content, AI image-generation APIs</p>
+        </div>
+
+        <h2>What is this project?</h2>
+        <p>
+          Play House is a browser-based educational platform comprising a shared Entrance experience and eight
+          interconnected Unity WebGL theatre projects. Users authenticate through the Entrance, create a character,
+          and navigate an interactive map to enter different educational experiences — art galleries, Chinese medicine
+          learning, rhythm and lion-dance games, AI-assisted image creation, card-collection mini-games, and more.
+          Each theatre is a standalone WebGL build connected through shared authentication, player data, and
+          cross-project navigation.
+        </p>
+
+        <h2>What I contributed</h2>
+
+        <h3>Entrance — platform foundation and authentication</h3>
+        <p class="project-theatre-about">The shared login hub and interactive map — users authenticate, create a character, and choose which theatre to enter.</p>
+        <ul>
+          <li>Built and expanded the main gateway connecting users to individual theatre experiences.</li>
+          <li>Implemented login, registration, character-skin selection, and gender-selection flows.</li>
+          <li>Integrated Education Bureau/HK education login and SAML authentication.</li>
+          <li>Built the interactive entrance map with selectable theatre buildings and transitions into other WebGL experiences.</li>
+          <li>Implemented return-to-Entrance behaviour, deep-link redirection, and player-profile refresh when returning from a theatre.</li>
+          <li>Built character creation and selection using Spine — 18 character skins, animation previews, gender selection, and character swapping.</li>
+          <li>Added account settings, logout, password reset/change-password flows, and failed-registration account cleanup.</li>
+          <li>Added I2 localization and converted Entrance content to localized Traditional Chinese text.</li>
+          <li>Built responsive Entrance UI — authentication, pop-ups, school login, building selection, map zoom, and large-screen aspect-ratio fixes.</li>
+          <li>Customized the browser HTML/CSS presentation, branding, logo, and responsive layout.</li>
+        </ul>
+
+        <h3>T1 — Chinese medicine learning game (~half of the project)</h3>
+        <p class="project-theatre-about">A stage-based learning game where players diagnose patients, match herbs and prescriptions, and progress through Chinese medicine scenarios.</p>
+        <div class="project-media project-media--inline">
+          <img src="assets/img/pro/playhouse-t1-field.jpg" alt="Play House T1 herb collection gameplay" loading="lazy" />
+        </div>
+        <ul>
+          <li>Built substantial parts of Stage 2 — tile-based map, hover outlines, visual feedback, and scene content.</li>
+          <li>Added Stage 3 and Stage 3.1/3.2 content and transitions between Stages 1, 2, and 3.</li>
+          <li>Implemented patient and doctor dialogue systems, patient Spine characters, walk-in/walk-out animations, and character selection.</li>
+          <li>Built result, reward, and leaderboard interfaces — top-ten results and current user ranking.</li>
+          <li>Added landing video, rules/tutorial content, sound effects, BGM, VFX, and medicine-completion animations.</li>
+          <li>Worked on herb, prescription, patient, character, and dialogue content through CSV-driven data.</li>
+        </ul>
+
+        <h3>T2 — digital art gallery / Five Elements experience</h3>
+        <p class="project-theatre-about">A digital art gallery themed around the Five Elements — browse, filter, and inspect student artwork loaded from backend APIs.</p>
+        <ul>
+          <li>Developed the T2 landing experience around the Five Elements — animated elements, clouds, particles, colors, and VFX.</li>
+          <li>Implemented painting and image loading from APIs with pagination, incremental loading on scroll, and loading-state feedback.</li>
+          <li>Built the painting inspection page and tag/filter system using API-driven buttons and multi-state selection.</li>
+          <li>Fixed scrolling, footer visibility, headers, canvas scaling, tweening, and multiple screen-size issues.</li>
+        </ul>
+
+        <h3>T3 — rhythm and lion-dance customization (full functional ownership)</h3>
+        <p class="project-theatre-about">A rhythm game paired with lion-dance customization — players follow beatmaps, score performances, and save custom lion skins.</p>
+        <div class="project-media project-media--inline">
+          <img src="assets/img/pro/playhouse-t3-game.jpg" alt="Play House T3 rhythm gameplay" loading="lazy" />
+        </div>
+        <ul>
+          <li>Inherited the existing T3 project, rebuilt its functional systems, and assumed end-to-end technical ownership of the WebGL experience.</li>
+          <li>Implemented and debugged rhythm-game beatmaps, note detection, timing synchronization, and new content maps.</li>
+          <li>Fixed pause behaviour so notes, music, and character animations stopped together.</li>
+          <li>Built lion skin/customization selection with combined skins, saved selections, load/restore behaviour, and player-progress gating.</li>
+          <li>Added recorded-video playback and download functionality.</li>
+        </ul>
+
+        <h3>T4 — AI-assisted image creation (full functional ownership)</h3>
+        <p class="project-theatre-about">An AI image-creation workshop — users compose prompts, pick styles and models, generate images, and review conversation history.</p>
+        <ul>
+          <li>Inherited the existing T4 project, reworked its full functional implementation, and assumed end-to-end technical ownership through production delivery.</li>
+          <li>Built resource/style loading and dynamic prompt-style interfaces from backend data.</li>
+          <li>Integrated AI image generation — prompts, model selection, styles, sizes, ratios, and image counts passed through frontend/backend APIs.</li>
+          <li>Implemented and debugged generation workflows for Leonardo/Phoenix models and later Nano Banana V2 prompt data.</li>
+          <li>Built single-player and workshop/multiplayer room checks using APIs and sockets.</li>
+          <li>Built conversation/image history loading with reverse chronological display, pagination, and safe termination when no older messages remained.</li>
+          <li>Added image preview, prompt copying, image copying, and horizontal resource scrolling.</li>
+        </ul>
+
+        <h3>T5 — support and production fixes</h3>
+        <p class="project-theatre-about">A story-driven theatre experience — my work here was targeted production support rather than primary feature ownership.</p>
+        <ul>
+          <li>Fixed a memory leak, WebGL dialogue-audio playback, missing font glyphs, browser HTML, and maintenance handling.</li>
+        </ul>
+
+        <h3>T6 — platform maintenance support</h3>
+        <p class="project-theatre-about">An additional theatre on the platform — shared browser integration and maintenance updates.</p>
+        <ul>
+          <li>Updated browser HTML presentation, missing-token redirection, and server-maintenance return-to-Entrance behaviour.</li>
+        </ul>
+
+        <h3>T7 — card-collection and mini-game experience</h3>
+        <p class="project-theatre-about">A card-collection world — explore a map, play card-based mini-games, and unlock collectibles tied to buildings and activities.</p>
+        <ul>
+          <li>Created the base Unity project and package configuration.</li>
+          <li>Delivered the full initial project flow — card-based mini-games, tutorial flows, card-placement activities, and quit behaviour.</li>
+          <li>Integrated APIs for retrieving and saving T7 player/game data.</li>
+          <li>Built card collection and unlocking, card details, lock states, completion effects, and all-cards-collected flow.</li>
+          <li>Added character Spine assets, character selection, landing content, maps, BGM, UI particles, and responsive layout fixes.</li>
+        </ul>
+
+        <h3>T8 — 3D movement and WebGL support</h3>
+        <p class="project-theatre-about">A 3D exploration experience — movement, camera, and environmental presentation in the browser.</p>
+        <ul>
+          <li>Implemented initial player movement, camera movement, floor setup, skybox/lighting, and browser-page design.</li>
+        </ul>
+
+        <h3>Senior / technical project lead (from T1 onward)</h3>
+        <ul>
+          <li>Joined and helped lead client meetings — requirements, feedback, priorities, and delivery expectations.</li>
+          <li>Translated client feedback into technical tasks and implementation decisions.</li>
+          <li>Helped plan development sequence, milestones, bug-fixing priorities, and releases across multiple Unity projects.</li>
+          <li>Coordinated work between developers, backend/API work, art/content, and client-facing deliverables.</li>
+          <li>Continued contributing production code while reviewing progress and helping unblock technical problems.</li>
+        </ul>
+      </div>
+      <div class="project-actions">
+        <a class="btn-loo btn-loo-ghost" href="games.html#professional-games">More professional work</a>
+      </div>
+    </main>
+    <footer class="site-footer">
+      <div class="container"><p>© <span id="year"></span> LooVik Wong</p></div>
+    </footer>
+    <script src="js/project-page.js"></script>
+    <script>
+      document.getElementById("year").textContent = new Date().getFullYear();
+    </script>
+  </body>
+</html>

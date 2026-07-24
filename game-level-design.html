@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Whack-A-Mole · LooVik</title>
+    <title>Game Level Design · LooVik</title>
     <link rel="icon" href="assets/favicon.svg" type="image/svg+xml" />
     <link rel="icon" href="assets/favicon.ico" sizes="any" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -28,18 +28,32 @@
       <a class="project-back" href="games.html"><i class="bi bi-arrow-left" aria-hidden="true"></i> Back to games</a>
       <header>
         <div class="project-tags">
-          <span class="project-tag">University</span>
-          <span class="project-tag">C++</span>
-          <span class="project-tag">SFML</span>
+          <span class="project-tag">Personal</span>
+          <span class="project-tag">Level design</span>
+          <span class="project-tag">HDRP</span>
+          <span class="project-tag">Unity</span>
         </div>
-        <h1>Whack-A-Mole</h1>
-        <p class="project-lead">Click timing arcade in C++.</p>
+        <h1>Game Level Design</h1>
+        <p class="project-lead">
+          Personal Unity HDRP level — first-person exploration with CCTV screens, projection geometry, and trigger-based
+          interactions.
+        </p>
       </header>
-      <div class="project-media">
-        <img src="assets/img/portfolio/thumbnails/whackamole.jpg" alt="Whack-A-Mole gameplay" />
-      </div>
       <div class="project-body">
-        <p>Score-focused whack-a-mole — timing targets and keeping pace under pressure.</p>
+        <h2>What is this project?</h2>
+        <p>
+          A personal Unity level-design exercise built in HDRP. Walk through a 3D space laid out with planes, projection
+          cubes, cones, and spot-lit zones. Security cameras feed live views onto in-world screens; trigger volumes let you
+          swap CCTV angles or toggle a video display while exploring in first person.
+        </p>
+
+        <h2>What I built</h2>
+        <ul>
+          <li>Level layout — floors, projection primitives, lighting, and player spawn.</li>
+          <li>First-person movement and mouse-look camera.</li>
+          <li>Four CCTV feeds on render textures — switch active camera pairs with E and R at trigger zones.</li>
+          <li>Video screen toggle — show or hide a projection display when entering a zone.</li>
+        </ul>
       </div>
       <div class="project-actions">
         <a class="btn-loo btn-loo-ghost" href="games.html">More games</a>

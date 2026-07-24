@@ -15,49 +15,53 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" />
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" />
     <link href="css/site.css" rel="stylesheet" />
+    <script src="js/gate.js"></script>
   </head>
   <body class="project-page">
     <header class="site-nav navbar navbar-expand-lg">
       <div class="container">
         <a class="site-brand" href="index.html">LooVik</a>
-        <a class="nav-link ms-auto fw-bold" href="index.html#work">All projects</a>
+        <a class="nav-link ms-auto fw-bold" href="games.html">All games</a>
       </div>
     </header>
     <main class="project-main">
-      <a class="project-back" href="index.html#work"><i class="bi bi-arrow-left" aria-hidden="true"></i> Back to work</a>
+      <a class="project-back" href="games.html"><i class="bi bi-arrow-left" aria-hidden="true"></i> Back to games</a>
       <header>
         <div class="project-tags">
-          <span class="project-tag">University</span>
-          <span class="project-tag">2-week jam</span>
+          <span class="project-tag">Group project</span>
+          <span class="project-tag">Atari 2600</span>
+          <span class="project-tag">Unity</span>
         </div>
         <h1>MugHead</h1>
         <p class="project-lead">Cuphead-inspired boss fight demake — team of six.</p>
       </header>
       <div class="project-media">
-        <video controls playsinline>
+        <video controls playsinline preload="metadata" poster="assets/img/portfolio/posters/cuphead-poster.jpg">
           <source src="assets/videos/Cuphead.mp4" type="video/mp4" />
         </video>
       </div>
       <div class="project-body">
+        <h2>What is this project?</h2>
         <p>
-          Atari 2600-style demake of Cuphead’s Floral Fury — multi-phase boss with escalating attacks. Three
-          lives, no mid-fight drops; boss respawns tougher after defeat.
+          MugHead is a Cuphead-inspired boss-fight demake built by a team of six — Atari 2600-style visuals,
+          multi-phase Floral Fury-style combat, three lives, and a boss that respawns tougher after each defeat.
         </p>
+
+        <h2>What I contributed</h2>
+        <ul>
+          <li>Phase 3 boss fight — attack patterns, looping phases, and boss setup.</li>
+          <li>Boomerang attack — animation, prefab, and in-fight behaviour.</li>
+          <li>Boss flow and main scene integration for the final phase.</li>
+        </ul>
       </div>
       <div class="project-actions">
-        <a
-          class="btn-loo btn-loo-primary"
-          href="https://github.com/MarjutA-K/MugHead.git"
-          target="_blank"
-          rel="noopener noreferrer"
-          ><i class="bi bi-github" aria-hidden="true"></i> GitHub</a
-        >
-        <a class="btn-loo btn-loo-ghost" href="index.html#work">More projects</a>
+        <a class="btn-loo btn-loo-ghost" href="games.html">More games</a>
       </div>
     </main>
     <footer class="site-footer">
       <div class="container"><p>© <span id="year"></span> LooVik Wong</p></div>
     </footer>
+    <script src="js/project-page.js"></script>
     <script>
       document.getElementById("year").textContent = new Date().getFullYear();
     </script>

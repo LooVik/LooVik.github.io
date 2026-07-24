@@ -1,0 +1,434 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>HeroGen 2 · LooVik</title>
+    <link rel="icon" href="assets/favicon.svg" type="image/svg+xml" />
+    <link rel="icon" href="assets/favicon.ico" sizes="any" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" />
+    <link href="css/site.css" rel="stylesheet" />
+    <script src="js/gate.js"></script>
+  </head>
+  <body class="project-page">
+    <header class="site-nav navbar navbar-expand-lg">
+      <div class="container">
+        <a class="site-brand" href="index.html">LooVik</a>
+        <a class="nav-link ms-auto fw-bold" href="games.html">All games</a>
+      </div>
+    </header>
+    <main class="project-main">
+      <a class="project-back" href="games.html#professional-games"
+        ><i class="bi bi-arrow-left" aria-hidden="true"></i> Back to games</a
+      >
+      <header>
+        <div class="project-tags">
+          <span class="project-tag">Professional</span>
+          <span class="project-tag">Ongoing</span>
+          <span class="project-tag">Unity</span>
+          <span class="project-tag">Mobile</span>
+        </div>
+        <h1>HeroGen 2</h1>
+        <p class="project-lead">
+          勇者大人的刷怪城 remaster — pixel-art mobile RPG rebuilt at Itchi Technology with expanded systems, cleaner UI,
+          and a modern live-ops foundation.
+        </p>
+      </header>
+      <div class="project-media project-media--app-icon">
+        <img src="assets/img/pro/herogen-icon.jpg" alt="HeroGen app icon" loading="lazy" />
+      </div>
+      <div class="project-body">
+        <p class="project-notice">
+          <strong>Ongoing project.</strong> This page tracks development progress and will be updated as more systems
+          ship. Dungeon combat (sections 5–8) is on a separate implementation track and is not part of my completed
+          scope below.
+        </p>
+
+        <div class="project-meta">
+          <p><strong>Role:</strong> Unity developer</p>
+          <p><strong>Studio:</strong> Itchi Technology Limited</p>
+          <p><strong>Platform:</strong> iOS &amp; Android (mobile portrait)</p>
+          <p><strong>Original release:</strong>
+            <a
+              href="https://apps.apple.com/us/app/%E5%8B%87%E8%80%85%E5%A4%A7%E4%BA%BA%E7%9A%84%E5%88%B7%E6%80%AA%E5%9F%8E/id1549377824"
+              target="_blank"
+              rel="noopener noreferrer"
+              >HeroGen (v1) on the App Store</a
+            >
+          </p>
+          <p><strong>Technology:</strong> Unity, C#, Addressables / AssetBundles, JSON save sync, remote config, mobile UI</p>
+        </div>
+
+        <h2>What is this project?</h2>
+        <p>
+          HeroGen 2 is a full remaster of the studio’s existing Hong Kong–developed pixel RPG. The first version shipped
+          with auto-battle dungeon farming, equipment synthesis, decoration placement, lucky draws, weekly rankings, and
+          reincarnation loops. This rebuild keeps the core identity but targets a stronger UI, clearer progression, more
+          live-event support, and a cleaner codebase for long-term updates.
+        </p>
+
+        <h2>Development checklist</h2>
+        <p>
+          Checklist from the team’s production plan. <strong>Done</strong> = implemented in my current scope.
+          <strong>Upcoming</strong> = dungeon combat track. <strong>Planned</strong> = release polish still ahead.
+        </p>
+
+        <div class="project-roadmap">
+          <details class="is-done" open>
+            <summary><span class="project-roadmap__status">Done</span>1. Project Setup</summary>
+            <ul>
+              <li>Create a project using the newest version of Unity.</li>
+              <li>Create the Git repository, branch rules, coding conventions, and build naming.</li>
+              <li>Create the main scenes: Loading, Main Hub, Dungeon, and test scenes.</li>
+              <li>Create data files for enemies, floors, drops, items, equipment, gems, decorations, quests, draws, events, and economy values.</li>
+              <li>Set up Addressables or AssetBundles for soft updates from the server.</li>
+              <li>Set up development builds, logs, crash reporting, and test/cheat tools.</li>
+            </ul>
+          </details>
+
+          <details class="is-done">
+            <summary><span class="project-roadmap__status">Done</span>2. Landing / Loading</summary>
+            <ul>
+              <li>Create a pixel-art looping background.</li>
+              <li>Show game logo and short logo animation.</li>
+              <li>Show loading progress and Preparing Content text.</li>
+              <li>Show Tap to Start only when loading is complete.</li>
+              <li>Show game version and local/server save status.</li>
+              <li>Handle no internet, failed bundle download, maintenance, and retry states.</li>
+            </ul>
+          </details>
+
+          <details class="is-done">
+            <summary><span class="project-roadmap__status">Done</span>3. First-Time Story and Tutorial</summary>
+            <ul>
+              <li>Create the opening story screen with short dialogue.</li>
+              <li>Tap once to reveal text and tap again to continue.</li>
+              <li>Allow Skip after the first viewing.</li>
+              <li>Save the HasSeenIntro flag.</li>
+              <li>Create spotlight tutorials for Quest, Dungeon, Battle, Stats, Equipment, Decoration, Lucky Draw, and Ranking.</li>
+            </ul>
+          </details>
+
+          <details class="is-done">
+            <summary><span class="project-roadmap__status">Done</span>4. Main Hub</summary>
+            <ul>
+              <li>Show level, EXP, gold, premium currency, stamina, and combat power at the top.</li>
+              <li>Show the current quest objective and progress.</li>
+              <li>Show the dungeon room, current floor portal, character.</li>
+              <li>Create bottom navigation for Character, Bag, Dungeon, Forge, and Shop.</li>
+              <li>Keep Settings and Event Notice as small shortcuts.</li>
+              <li>Show temporary popups for level up, item obtained, quest complete, and ranking reward.</li>
+              <li>Avoid banner ads in the main gameplay area.</li>
+              <li>Add gems panel.</li>
+              <li>Add gems slot unlocked.</li>
+            </ul>
+          </details>
+
+          <details class="is-upcoming">
+            <summary><span class="project-roadmap__status">Upcoming</span>5. Dungeon Entry / Before Battle</summary>
+            <p>Dungeon combat track — separate from my delivered scope so far.</p>
+            <ul>
+              <li>Show the selected floor or depth.</li>
+              <li>Show enemy type and enemy preview.</li>
+              <li>Show recommended combat power.</li>
+              <li>Show possible item and material drops.</li>
+              <li>Show stamina cost before entering.</li>
+              <li>Allow Start from Beginning, Select Depth, Continue, and Cancel.</li>
+              <li>Show clear warning for unsafe retreat or possible lost rewards.</li>
+              <li>Show remaining portal/event time when relevant.</li>
+            </ul>
+          </details>
+
+          <details class="is-upcoming">
+            <summary><span class="project-roadmap__status">Upcoming</span>6. Dungeon Battle</summary>
+            <p>Dungeon combat track — separate from my delivered scope so far.</p>
+            <ul>
+              <li>Create automatic hero and enemy attacks.</li>
+              <li>Implement HP, attack, defense, evasion, critical hit, attack speed, and damage calculation.</li>
+              <li>Show readable hero and enemy HP bars.</li>
+              <li>Show floating damage numbers, critical text, hit flash, and sprite shake.</li>
+              <li>Add battle speed x1, x2, and x3.</li>
+              <li>Show a short battle log with damage, EXP, gold, drops, and system messages.</li>
+              <li>Play hit, victory, defeat, drop, and level-up sound effects.</li>
+              <li>Show victory or defeat result clearly.</li>
+              <li>Weapon-type combat profiles (Sword, Greatsword/Axe, Dagger, Bow, Hammer/Mace) affecting speed, damage, hit rate, crit, and animation timing.</li>
+              <li>Dungeon battle formula reads equipped weapon type before each attack.</li>
+              <li>Weapon differences shown through attack logs, damage numbers, VFX, and sound timing.</li>
+            </ul>
+          </details>
+
+          <details class="is-upcoming">
+            <summary><span class="project-roadmap__status">Upcoming</span>7. Dungeon Farming and Convenience</summary>
+            <p>Dungeon combat track — separate from my delivered scope so far.</p>
+            <ul>
+              <li>Allow Repeat Cleared Floor.</li>
+              <li>Allow Auto Push Next Floor.</li>
+              <li>Allow Auto Repeat until the player stops or an auto-stop rule triggers.</li>
+              <li>Create a multi-run reward summary.</li>
+              <li>Stop automatically when stamina is zero, inventory is full, a boss appears, a milestone is reached, a rare item drops, or defeats repeat.</li>
+              <li>After defeat, explain whether HP, attack, defense, equipment, gems, or decorations are too weak.</li>
+              <li>Provide Retry, Upgrade, Return Hub, and Repeat Easier Floor actions.</li>
+            </ul>
+          </details>
+
+          <details class="is-upcoming">
+            <summary><span class="project-roadmap__status">Upcoming</span>8. Floor Progression and Bosses</summary>
+            <p>Dungeon combat track — separate from my delivered scope so far.</p>
+            <ul>
+              <li>Create floor data and difficulty scaling.</li>
+              <li>Add a boss every 10 floors or another approved interval.</li>
+              <li>Unlock story scenes and systems at selected floor milestones.</li>
+              <li>Allow farming previously cleared floors.</li>
+              <li>Create separate reward tables for normal floors and boss floors.</li>
+              <li>Save the highest cleared floor and current checkpoint.</li>
+              <li>Balance recommended power so it matches real player difficulty.</li>
+            </ul>
+          </details>
+
+          <details class="is-done">
+            <summary><span class="project-roadmap__status">Done</span>9. Character Level and Stats</summary>
+            <ul>
+              <li>Implement level and EXP growth.</li>
+              <li>Implement HP, Attack, Defense, Evasion, and Luck.</li>
+              <li>Show remaining stat points.</li>
+              <li>Add +1, +10, and +Max buttons.</li>
+              <li>Show base value and equipment/gem bonus separately.</li>
+              <li>Show combat-power change before confirmation.</li>
+              <li>Add Balanced, Attack, Tank, Dodge, and Farming presets.</li>
+              <li>Add stat reset using gold or a reset item.</li>
+              <li>Add explanations/tooltips for every stat.</li>
+            </ul>
+          </details>
+
+          <details class="is-done">
+            <summary><span class="project-roadmap__status">Done</span>10. Inventory and Item Categories</summary>
+            <ul>
+              <li>Create five item categories: Consumable, Equipment, Cash Item, Material, and Special.</li>
+              <li>Add filters, sorting, search, rarity, quantity, and item details.</li>
+              <li>Define stack limits to 64.</li>
+              <li>Add backpack capacity and safebox expansion.</li>
+              <li>Prevent rewards from disappearing when inventory is full.</li>
+              <li>Add Lock or Favorite for valuable items.</li>
+              <li>Add Use, Equip, Sell, Synthesize, and View Source actions where relevant.</li>
+              <li>Prevent Special items from being sold unless explicitly allowed.</li>
+            </ul>
+          </details>
+
+          <details class="is-done">
+            <summary><span class="project-roadmap__status">Done</span>11. Equipment and Character Appearance</summary>
+            <ul>
+              <li>Create weapon, armor, accessory, and other approved equipment slots.</li>
+              <li>Show equipped items around the character preview.</li>
+              <li>Show equipment rarity, level, stats, and combat power.</li>
+              <li>Show comparison between current and selected equipment.</li>
+              <li>Add Auto Equip.</li>
+              <li>Add Equip and Unequip actions.</li>
+              <li>Make supported equipment visually change the pixel character.</li>
+              <li>Keep a fallback appearance for equipment without a custom visual asset.</li>
+              <li>Show the active character appearance in battle and ranking.</li>
+            </ul>
+          </details>
+
+          <details class="is-done">
+            <summary><span class="project-roadmap__status">Done</span>12. Equipment Enhancement and Synthesis</summary>
+            <ul>
+              <li>Show gold and material cost before enhancing.</li>
+              <li>Show enhancement success rate if the system uses chance.</li>
+              <li>Show current stats, upgraded stats, and combat-power change.</li>
+              <li>Define what happens when enhancement fails.</li>
+              <li>Do not destroy valuable equipment unless the risk is clearly approved and shown.</li>
+              <li>Add safe milestone levels such as +5 or +10 if needed.</li>
+              <li>Add Repeat Enhance when the player has enough resources.</li>
+              <li>Add synthesis using duplicate or low-tier equipment.</li>
+              <li>Add Auto Select while protecting equipped, locked, and favorite items.</li>
+              <li>Show a clear synthesis-result animation.</li>
+            </ul>
+          </details>
+
+          <details class="is-done">
+            <summary><span class="project-roadmap__status">Done</span>13. Gem Socket System</summary>
+            <ul>
+              <li>Create gem types, grades, stats, rarity, and compatible equipment rules.</li>
+              <li>Add socket counts to weapons and equipment.</li>
+              <li>Show locked, empty, and occupied sockets.</li>
+              <li>Allow players to open locked sockets using gold, materials, or a socket-opening item/purchase/rare material.</li>
+              <li>Show socket-opening cost before confirmation.</li>
+              <li>Allow compatible gems to be inserted into empty sockets.</li>
+              <li>Show stat and combat-power changes before inserting.</li>
+              <li>Allow gems to be removed and returned to inventory.</li>
+              <li>Charge gold to remove early-game or low-grade gems.</li>
+              <li>Require a special Gem Extractor to remove high-grade gems.</li>
+              <li>Do not destroy the gem or equipment unless a future risk rule is clearly approved.</li>
+              <li>Handle full inventory safely when removing gems.</li>
+            </ul>
+          </details>
+
+          <details class="is-done">
+            <summary><span class="project-roadmap__status">Done</span>14. Decoration System</summary>
+            <ul>
+              <li>Create a 9×9 decoration base/grid.</li>
+              <li>Show valid placement tiles.</li>
+              <li>Allow one placement for each owned decoration item.</li>
+              <li>Define grid cost for each decoration.</li>
+              <li>Show decoration rarity, passive bonus, upgrade level, and ownership.</li>
+              <li>Preview the position and bonus before confirmation.</li>
+              <li>Allow moving and re-editing placement.</li>
+              <li>Apply the approved rule for whether decorations can be removed.</li>
+              <li>Show the combined total decoration bonus.</li>
+              <li>Allow decorations to be upgraded using gold and materials.</li>
+              <li>Create a Decoration Archive or collection page.</li>
+              <li>Add the purchasable enemy-spawn decoration, spawn timer, tap-to-kill action, and rare reward chance.</li>
+            </ul>
+          </details>
+
+          <details class="is-done">
+            <summary><span class="project-roadmap__status">Done</span>15. Quest and Monster Book</summary>
+            <ul>
+              <li>Create Main, Daily, Random, and Milestone quests.</li>
+              <li>Limit daily quests to 3 per day.</li>
+              <li>Stop giving daily quests after all 3 are completed until reset.</li>
+              <li>Allow rewarded-ad quest refresh if approved.</li>
+              <li>Add Go, Claim, and Claim All buttons.</li>
+              <li>Show quest progress bars and reward previews.</li>
+              <li>Show a short Quest Complete popup.</li>
+              <li>Create Monster Book discovered and undiscovered states.</li>
+              <li>Show monster sprite, name, floor range, defeated count, and possible drops.</li>
+              <li>Add small collection rewards for monster families or defeat milestones.</li>
+            </ul>
+          </details>
+
+          <details class="is-done">
+            <summary><span class="project-roadmap__status">Done</span>16. Lucky Draw</summary>
+            <ul>
+              <li>Create reward pools and rarity levels.</li>
+              <li>Define and display the draw odds clearly.</li>
+              <li>Add daily free draw limits.</li>
+              <li>Add premium-currency draw cost.</li>
+              <li>Show a reward-preview page.</li>
+              <li>Create rarity reveal animations and sounds.</li>
+              <li>Add draw history.</li>
+              <li>Add an optional pity or rare-reward progress meter.</li>
+              <li>Deliver rewards safely into inventory.</li>
+              <li>Add rewarded-ad refresh only within approved daily limits.</li>
+            </ul>
+          </details>
+
+          <details class="is-done">
+            <summary><span class="project-roadmap__status">Done</span>17. Reincarnation and Ranking</summary>
+            <ul>
+              <li>Define the reincarnation requirement.</li>
+              <li>Show what progress resets and what remains.</li>
+              <li>Show the permanent bonus before confirmation.</li>
+              <li>Limit reincarnation to 1 under the current balance plan.</li>
+              <li>Reset the player safely and start the new run stronger.</li>
+              <li>Create a weekly ranking schedule and Sunday reset.</li>
+              <li>Show player rank, combat power, skin/avatar, reward tier, and timer.</li>
+              <li>Add NPC or simulated competitors when the leaderboard is empty.</li>
+              <li>Validate impossible combat-power scores.</li>
+              <li>Add ranking history and one-time reward claiming.</li>
+            </ul>
+          </details>
+
+          <details class="is-done">
+            <summary><span class="project-roadmap__status">Done</span>18. Character Skins</summary>
+            <ul>
+              <li>Create pixel-art character skins.</li>
+              <li>Create skin ownership and active-skin data.</li>
+              <li>Allow skin preview, unlock, equip, and change.</li>
+              <li>Connect skins to Lucky Draw, VIP, events, milestones, or shop where approved.</li>
+              <li>Show the active skin in the main hub, battle, character screen, and ranking.</li>
+              <li>Define how skins work together with equipment appearance.</li>
+            </ul>
+          </details>
+
+          <details class="is-done">
+            <summary><span class="project-roadmap__status">Done</span>19. Economy, Shop, Ads, and VIP</summary>
+            <ul>
+              <li>Define all currencies, their sources, and where they are spent.</li>
+              <li>Set selling price to 50% of buying price unless a category has an approved exception.</li>
+              <li>Create rewarded ads for coins, double rewards, free draw, revive, quest refresh, or stamina.</li>
+              <li>Add daily limits and cooldowns for every ad placement.</li>
+              <li>Create VIP benefits and the approved 5–8 ad-related benefits or skips.</li>
+              <li>Add Remove Ads purchase.</li>
+              <li>Create premium currency and shop items.</li>
+              <li>After dungeon failure, optionally show a limited-time discounted offer.</li>
+              <li>Add offer countdown, frequency limit, close button, and normal non-paid choices.</li>
+              <li>Validate purchases and restore purchases safely.</li>
+            </ul>
+          </details>
+
+          <details class="is-done">
+            <summary><span class="project-roadmap__status">Done</span>20. Event Dungeon and Stamina</summary>
+            <ul>
+              <li>Create stamina amount, maximum capacity, regeneration, and entry costs.</li>
+              <li>Use server time so players cannot change device time to gain stamina.</li>
+              <li>Allow rewarded or paid stamina refresh within limits.</li>
+              <li>Create event dungeons with start/end time.</li>
+              <li>Create different event levels with different materials.</li>
+              <li>Show remaining time, required stamina, possible materials, and rewards.</li>
+              <li>Create event milestone rewards and event exchange items.</li>
+              <li>Allow events to be enabled and changed through remote configuration.</li>
+            </ul>
+          </details>
+
+          <details class="is-done">
+            <summary><span class="project-roadmap__status">Done</span>21. Save, Server, and Soft Updates</summary>
+            <ul>
+              <li>Store player progress as versioned JSON data.</li>
+              <li>Convert saved JSON back into game classes safely.</li>
+              <li>Save lastUpdateTime, save version, and checksum.</li>
+              <li>Autosave after battles, rewards, purchases, equipment changes, gem changes, quests, draws, decorations, and reincarnation.</li>
+              <li>Create local backup and corruption recovery.</li>
+              <li>Sync local progress with the server.</li>
+              <li>Handle offline play and reconnect sync.</li>
+              <li>Create conflict resolution when local and server saves are different.</li>
+              <li>Use Addressables or AssetBundles for remotely updated assets.</li>
+              <li>Keep UI styles/config data separate when possible.</li>
+              <li>Add bundle version checking, download progress, cache, fallback, and rollback.</li>
+            </ul>
+          </details>
+
+          <details class="is-planned">
+            <summary><span class="project-roadmap__status">Planned</span>22. Final Polish, Testing, and Release</summary>
+            <ul>
+              <li>Add final pixel art, animations, VFX, audio, icons, and rarity effects.</li>
+              <li>Check every screen on small and tall portrait devices.</li>
+              <li>Check English and Traditional Chinese text for overflow and font support.</li>
+              <li>Test save corruption, reinstall, disconnect, full inventory, app closing during transactions, and duplicate requests.</li>
+              <li>Test all purchases, ads, rewards, ranking claims, draws, socket operations, and reincarnation.</li>
+              <li>Test long auto-battle sessions for memory, battery, and performance.</li>
+              <li>Add analytics for tutorial, dungeon, failure, rewards, ads, purchases, draws, stamina, ranking, and save conflicts.</li>
+              <li>Prepare store listing, privacy policy, screenshots, support contact, and age rating.</li>
+              <li>Run internal testing, closed beta, soft launch, and staged release.</li>
+              <li>Fix stability and progression problems before adding more content.</li>
+            </ul>
+          </details>
+        </div>
+      </div>
+      <div class="project-actions">
+        <a
+          class="btn-loo btn-loo-ghost"
+          href="https://apps.apple.com/us/app/%E5%8B%87%E8%80%85%E5%A4%A7%E4%BA%BA%E7%9A%84%E5%88%B7%E6%80%AA%E5%9F%8E/id1549377824"
+          target="_blank"
+          rel="noopener noreferrer"
+          >HeroGen v1 on App Store</a
+        >
+        <a class="btn-loo btn-loo-ghost" href="games.html#professional-games">More professional work</a>
+      </div>
+    </main>
+    <footer class="site-footer">
+      <div class="container"><p>© <span id="year"></span> LooVik Wong</p></div>
+    </footer>
+    <script src="js/project-page.js"></script>
+    <script>
+      document.getElementById("year").textContent = new Date().getFullYear();
+    </script>
+  </body>
+</html>

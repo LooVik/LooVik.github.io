@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Play House Mobile App · LooVik</title>
+    <link rel="icon" href="assets/favicon.svg" type="image/svg+xml" />
+    <link rel="icon" href="assets/favicon.ico" sizes="any" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" />
+    <link href="css/site.css" rel="stylesheet" />
+    <script src="js/gate.js"></script>
+  </head>
+  <body class="project-page">
+    <header class="site-nav navbar navbar-expand-lg">
+      <div class="container">
+        <a class="site-brand" href="index.html">LooVik</a>
+        <a class="nav-link ms-auto fw-bold" href="games.html">All games</a>
+      </div>
+    </header>
+    <main class="project-main">
+      <a class="project-back" href="games.html#professional-games"><i class="bi bi-arrow-left" aria-hidden="true"></i> Back to games</a>
+      <header>
+        <div class="project-tags">
+          <span class="project-tag">Professional</span>
+          <span class="project-tag">Unity</span>
+          <span class="project-tag">iOS &amp; Android</span>
+          <span class="project-tag">Education</span>
+        </div>
+        <h1>Play House Mobile App</h1>
+        <p class="project-lead">Unified iOS/Android app combining Entrance, T1, T3, and T7 from the Play House educational platform.</p>
+      </header>
+      <div class="project-body">
+        <div class="project-meta">
+          <p><strong>Role:</strong> Project Manager / Senior Unity Developer</p>
+          <p><strong>Period:</strong> 2025–2026</p>
+          <p><strong>Platform:</strong> iOS and Android</p>
+          <p><strong>App experiences:</strong> Entrance, T1, T3, and T7</p>
+          <p><strong>Technology:</strong> Unity, C#, Firebase SDK, Addressables, Spine, Tilemaps, mobile safe areas, REST APIs, localization, rhythm-game systems</p>
+        </div>
+
+        <h2>What is this project?</h2>
+        <p>
+          The Play House Mobile App is the native iOS and Android adaptation of the Play House educational platform.
+          Where the WebGL version runs as separate browser-based theatre experiences, the mobile app merges Entrance,
+          T1, T3, and T7 into a single unified application. Users authenticate once, navigate between educational
+          experiences inside one app, and retain shared player data and session continuity across theatres — with
+          every interface adapted for touch, safe areas, and varying phone and tablet screen sizes.
+        </p>
+
+        <h2>What I contributed</h2>
+
+        <h3>Project management and client-facing responsibilities</h3>
+        <ul>
+          <li>Served as the primary project manager and direct point of contact for the client.</li>
+          <li>Led client meetings independently — gathering business, content, gameplay, and technical requirements.</li>
+          <li>Recorded meeting notes, decisions, feedback, open questions, and follow-up action points.</li>
+          <li>Converted client discussions into development tasks, priorities, feature scopes, and implementation plans.</li>
+          <li>Proposed gameplay, usability, navigation, and mobile-experience improvements.</li>
+          <li>Coordinated development across Entrance, T1, T3, and T7 and managed integration into a unified mobile application.</li>
+          <li>Tracked progress, bugs, client feedback, build readiness, and delivery priorities.</li>
+          <li>Continued writing production code and solving technical problems while managing the project.</li>
+        </ul>
+
+        <h3>Entrance — mobile platform foundation</h3>
+        <ul>
+          <li>Converted the WebGL Entrance into the native mobile-app entry point.</li>
+          <li>Replaced the WebGL/REST Firebase authentication path with the native Firebase SDK for iOS and Android.</li>
+          <li>Configured platform-specific Firebase files — Android <code>google-services.json</code> and iOS <code>GoogleService-Info.plist</code>.</li>
+          <li>Reworked login, registration, authentication state, player data, and refresh-token handling for the app environment.</li>
+          <li>Integrated T1, T3, and T7 into the Entrance project so users move between experiences inside one application.</li>
+          <li>Implemented correct player/session handoff from Entrance to each theatre and restored shared authentication when changing theatres.</li>
+          <li>Added mobile safe-area handling, UI scaling across phone and tablet sizes, and I2 localization.</li>
+        </ul>
+
+        <h3>Shared mobile architecture</h3>
+        <ul>
+          <li>Added Unity Addressables and converted theatre loading/scene changes to an Addressables-based flow.</li>
+          <li>Implemented a shared Audio Manager for consistent BGM behaviour across every theatre.</li>
+          <li>Added Android keystore/build configuration and supported Android packaging.</li>
+          <li>Fixed merge and dependency issues when combining previously separate Unity projects.</li>
+          <li>Reused the Entrance game/session manager across theatres for authentication and token refresh.</li>
+        </ul>
+
+        <h3>T1 — mobile conversion and integration support</h3>
+        <ul>
+          <li>Integrated T1 into the combined mobile application.</li>
+          <li>Fixed T1 Spine assets so its character content did not incorrectly use Entrance character skeletons.</li>
+          <li>Connected T1 to the shared Entrance game/session manager and token-refresh flow.</li>
+          <li>Added mobile safe-area handling for T1 mini-games and button interfaces.</li>
+          <li>Updated remaining T1 UI panels and sizing for mobile devices.</li>
+          <li>Included T1 in the Addressables-based scene/build flow.</li>
+        </ul>
+
+        <h3>T3 — complete mobile rhythm-game rebuild</h3>
+        <ul>
+          <li>Ported T3 into the mobile application and reworked the complete functional flow for touch-based play.</li>
+          <li>Transformed the WebGL concept into a full mobile rhythm/music game using client-provided songs and beatmaps.</li>
+          <li>Built beatmap-driven note spawning and timing with synchronized music playback.</li>
+          <li>Implemented multiple note colors/types, normal and long notes, hit areas, travel timing, and speed/difficulty profiles.</li>
+          <li>Built touch/drum input, hit detection, note judgments, perfect/good/miss feedback, scoring, combo tracking, and result presentation.</li>
+          <li>Added visual feedback, drum-hit VFX, sound effects, and mobile haptic feedback.</li>
+          <li>Built Music Mode UI, Challenge/AI mode functionality, lion-dance customization, and Spine skin handling.</li>
+          <li>Connected the complete T3 frontend to backend APIs and player data.</li>
+        </ul>
+
+        <h3>T7 — expanded world map and mobile integration</h3>
+        <ul>
+          <li>Integrated T7 into the Entrance-based mobile application and resolved project/merge errors.</li>
+          <li>Expanded T7 with a substantially larger explorable map and additional map areas.</li>
+          <li>Implemented teleportation between separated map areas with VFX and corrected player state when moving between regions.</li>
+          <li>Built a minimap system with indicators synchronized between the world, player, cards/buildings, and minimap UI.</li>
+          <li>Added new tilemap assets, map content, and area-specific presentation.</li>
+          <li>Integrated T7 authentication with the Entrance session and fixed token-refresh/player-data transfer.</li>
+        </ul>
+      </div>
+      <div class="project-actions">
+        <a class="btn-loo btn-loo-ghost" href="games.html#professional-games">More professional work</a>
+      </div>
+    </main>
+    <footer class="site-footer">
+      <div class="container"><p>© <span id="year"></span> LooVik Wong</p></div>
+    </footer>
+    <script src="js/project-page.js"></script>
+    <script>
+      document.getElementById("year").textContent = new Date().getFullYear();
+    </script>
+  </body>
+</html>

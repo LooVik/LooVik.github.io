@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>InnoTech for SEN Students · LooVik</title>
+    <link rel="icon" href="assets/favicon.svg" type="image/svg+xml" />
+    <link rel="icon" href="assets/favicon.ico" sizes="any" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" />
+    <link href="css/site.css" rel="stylesheet" />
+    <script src="js/gate.js"></script>
+  </head>
+  <body class="project-page">
+    <header class="site-nav navbar navbar-expand-lg">
+      <div class="container">
+        <a class="site-brand" href="index.html">LooVik</a>
+        <a class="nav-link ms-auto fw-bold" href="games.html">All games</a>
+      </div>
+    </header>
+    <main class="project-main">
+      <a class="project-back" href="games.html#professional-games"><i class="bi bi-arrow-left" aria-hidden="true"></i> Back to games</a>
+      <header>
+        <div class="project-tags">
+          <span class="project-tag">Professional</span>
+          <span class="project-tag">Unity</span>
+          <span class="project-tag">WebGL</span>
+          <span class="project-tag">Firebase</span>
+        </div>
+        <h1>InnoTech for SEN Students</h1>
+        <p class="project-lead">Library Big Adventure — an educational mini-game platform for SEN students at EdUHK.</p>
+      </header>
+      <div class="project-media">
+        <img src="assets/img/pro/innotech-login.jpg" alt="InnoTech for SEN Students login screen" loading="lazy" />
+      </div>
+      <div class="project-body">
+        <div class="project-meta">
+          <p><strong>Role:</strong> Unity WebGL migration and stabilization developer</p>
+          <p><strong>Period:</strong> Sep – Nov 2024</p>
+          <p><strong>Platform:</strong> WebGL (browser)</p>
+          <p><strong>Technology:</strong> Unity, C#, Firebase Authentication, Cloud Firestore, Firebase REST APIs, JavaScript/WebGL plug-ins, TextMeshPro</p>
+        </div>
+
+        <h2>What is this project?</h2>
+        <p>
+          InnoTech for SEN Students (圖書館大冒險 — Library Big Adventure) is an existing Unity educational application
+          built for special educational needs (SEN) students, developed for The Education University of Hong Kong
+          Faculty of Education and Human Development. The platform contains multiple educational mini-games, daily
+          quests, character creation, and progression systems — originally oriented toward native/mobile deployment
+          before being converted for browser delivery.
+        </p>
+
+        <h2>What I contributed</h2>
+
+        <h3>App-to-WebGL migration</h3>
+        <ul>
+          <li>Migrated the existing Unity project toward a WebGL-compatible build configuration.</li>
+          <li>Changed the Unity editor/project version and package configuration to produce successful WebGL builds.</li>
+          <li>Resolved project-opening, dependency, plug-in, and compilation errors caused by mobile/iOS-oriented packages and APIs.</li>
+          <li>Added and configured a WebGL build template — browser page styling, branding assets, icon, background, and project settings.</li>
+          <li>Disabled or replaced code paths and unsupported dependencies that prevented individual mini-games from compiling for WebGL.</li>
+          <li>Produced and updated deployable WebGL builds during testing and stabilization.</li>
+        </ul>
+
+        <h3>Firebase WebGL migration</h3>
+        <ul>
+          <li>Added a Firebase WebGL bridge together with FullSerializer and REST client dependencies.</li>
+          <li>Replaced the native/mobile Firebase login path with a WebGL-compatible Firebase Authentication REST flow.</li>
+          <li>Implemented email/password sign-in through Firebase Identity Toolkit — parsing user ID, ID token, and refresh token.</li>
+          <li>Implemented token refresh through Google's Secure Token endpoint so authenticated backend requests continued in the browser.</li>
+          <li>Updated authentication controllers and saved player-session data for the WebGL login flow.</li>
+          <li>Added platform guards around native Firebase SDK code to prevent unsupported APIs from compiling in WebGL.</li>
+          <li>Adapted Firestore operations toward the WebGL bridge and callback-based browser flow.</li>
+          <li>Updated network request handling so authenticated API calls could retrieve refreshed tokens and continue through the existing request queue/retry flow.</li>
+        </ul>
+
+        <h3>Mini-game and progression fixes</h3>
+        <ul>
+          <li><strong>Mini-game 5 &amp; 10:</strong> Fixed loading-screen stalls by making the browser cache-download flow create its persistent cache directory before saving downloaded images.</li>
+          <li><strong>Mini-game 7:</strong> Replaced camera-based hand-raise detection (unsuitable for WebGL) with keyboard input and then a UI-button interaction flow.</li>
+          <li><strong>Mini-game 9:</strong> Removed a potentially endless random-placement loop that could prevent the game from finishing its loading process.</li>
+          <li><strong>Mini-game 11:</strong> Restored the per-question countdown timer, timeout handling, progression to the next question, and timer cancellation after an answer.</li>
+          <li><strong>Mini-game 4:</strong> Updated the scene and related content during WebGL stabilization.</li>
+          <li><strong>Daily Quests / Mini-games 13 &amp; 15:</strong> Fixed progression so users could enter the relevant daily-quest mini-games instead of becoming blocked in the previous cache/assessment path.</li>
+        </ul>
+
+        <h3>UI, localization, and browser polish</h3>
+        <ul>
+          <li>Fixed missing text in alerts, countdown interfaces, downloading screens, and confirmation pop-ups.</li>
+          <li>Corrected Chinese text rendering in WebGL builds across authentication, character creation, settings, loading, daily quests, alerts, library content, and multiple mini-games.</li>
+          <li>Corrected confirmation-dialog content and texture/font configuration.</li>
+          <li>Updated the browser build presentation with appropriate background, icon, favicon, layout, and WebGL template settings.</li>
+        </ul>
+      </div>
+      <div class="project-actions">
+        <a class="btn-loo btn-loo-ghost" href="games.html#professional-games">More professional work</a>
+      </div>
+    </main>
+    <footer class="site-footer">
+      <div class="container"><p>© <span id="year"></span> LooVik Wong</p></div>
+    </footer>
+    <script src="js/project-page.js"></script>
+    <script>
+      document.getElementById("year").textContent = new Date().getFullYear();
+    </script>
+  </body>
+</html>

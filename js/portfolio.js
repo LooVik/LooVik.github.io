@@ -142,7 +142,7 @@
       alt: "MugHead",
       label: "MugHead",
       stats: [
-        { icon: "bi-pc-display", color: "icon-accent", title: "PC demake", sub: "Platform" },
+        { icon: "bi-controller", color: "icon-accent", title: "Atari 2600", sub: "Platform" },
         { icon: "bi-unity", color: "icon-cyan", title: "Unity", sub: "Engine" },
         { icon: "bi-calendar-event", color: "icon-purple", title: "2-week jam", sub: "Team of 6" },
       ],
