@@ -29,28 +29,52 @@
       <header>
         <div class="project-tags">
           <span class="project-tag">Personal</span>
-          <span class="project-tag">Ongoing</span>
           <span class="project-tag">Unity</span>
+          <span class="project-tag">Mobile</span>
         </div>
         <h1>War of Tank</h1>
-        <p class="project-lead">Ongoing personal Unity project — tank prefabs and combat scripts are in place; the main scene is next.</p>
+        <p class="project-lead">Mobile team tank battler — pick a map and a mode, then fight AI tanks 5v5 or 3v3 alongside bot teammates.</p>
       </header>
+      <div class="project-media project-media--hero">
+        <img
+          src="assets/img/portfolio/fullsize/war-of-tank-gameplay.jpg"
+          alt="War of Tank gameplay — a green player tank in a desert battlefield, with an allies, enemies, kills and HP readout across the top"
+          width="975"
+          height="448"
+          loading="lazy"
+        />
+      </div>
       <div class="project-body">
         <h2>What is this project?</h2>
         <p>
-          War of Tank is a personal Unity project I’m picking back up — originally started around location-aware /
-          AR-style play with Mapbox in the stack. I already built a chibi tank model, enemy prefab, paint-ball and
-          water-ball ammo, and movement/shooting logic, but the main game scene was never finished. That’s the part
-          I’m working on next.
+          War of Tank is a personal Unity project built for mobile. Players choose a map and a mode — 5v5 or 3v3 —
+          then drop into a team battle against AI tanks, with bot teammates fighting alongside them.
         </p>
+        <p>
+          Matches play out in low-poly desert arenas built around hangars, radar towers and rock formations that
+          double as cover. Teams are colour-coded so you can read the fight at a glance on a small screen, and a
+          compact HUD tracks surviving allies and enemies, your kill count, and your remaining health.
+        </p>
+
+        <div class="project-media project-media--inline">
+          <img
+            src="assets/img/portfolio/fullsize/war-of-tank-base.jpg"
+            alt="War of Tank desert base — red and blue chibi tanks around hangars, a radar tower and rock formations"
+            width="909"
+            height="532"
+            loading="lazy"
+          />
+        </div>
 
         <h2>What I contributed</h2>
         <ul>
-          <li>Chibi tank model, enemy tank prefab, and tank-factory spawn object.</li>
-          <li>Tank behaviour — timed movement, random turns, and repeating paint-ball shots with physics.</li>
-          <li>Paint ammo with random colour assignment on spawn.</li>
-          <li>Water-ball hit detection wired toward a central game manager.</li>
-          <li>Mapbox / AR Foundation groundwork in the project — main scene and game loop still to come.</li>
+          <li>Chibi tank model, enemy tank prefab, and the spawn object that places both teams at match start.</li>
+          <li>Map and mode selection — 5v5 or 3v3 — feeding team sizes into match setup.</li>
+          <li>AI tank behaviour: movement, turning, and repeating shots with physics-driven projectiles.</li>
+          <li>Bot teammates that fight alongside the player on the same side.</li>
+          <li>Hit detection and damage reporting into a central game manager that tracks the match state.</li>
+          <li>HUD showing surviving allies and enemies, kill count, and remaining health.</li>
+          <li>Low-poly desert arena laid out around hangars, radar towers and rock cover, built to read clearly on a phone screen.</li>
         </ul>
       </div>
       <div class="project-actions">
