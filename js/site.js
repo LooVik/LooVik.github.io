@@ -1,4 +1,15 @@
 (function () {
+  /* Smooth scrolling fights the browser restoring your position when you come
+     back to this page, landing you short of where you were. Switch it off while
+     the browser settles, then hand it back for in-page anchor links. */
+  const suspendSmoothScroll = () => {
+    const root = document.documentElement;
+    root.style.scrollBehavior = "auto";
+    setTimeout(() => root.style.removeProperty("scroll-behavior"), 400);
+  };
+  window.addEventListener("pageshow", suspendSmoothScroll);
+  window.addEventListener("popstate", suspendSmoothScroll);
+
   const nav = document.querySelector(".site-nav");
   const hero = document.querySelector(".hero-intro");
 
