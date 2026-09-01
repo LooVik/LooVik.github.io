@@ -171,10 +171,41 @@ img {
 }
 
 @media (max-width: 991.98px) {
+  /* The open menu hangs below the fixed bar, so it needs to be opaque in its
+     own right — otherwise the page scrolls visibly behind the links. */
   .site-nav .navbar-collapse {
-    margin-top: 0.65rem;
-    padding: 0.75rem 0 0.5rem;
-    border-top: 1px solid var(--line);
+    margin-top: 0.6rem;
+    padding: 0.4rem;
+    background: var(--surface);
+    border: 1px solid var(--line);
+    border-radius: calc(var(--radius) + 2px);
+    box-shadow: var(--shadow-hover);
+  }
+
+  .site-nav .navbar-collapse .navbar-nav {
+    gap: 0.15rem;
+  }
+
+  /* Panel is light, so links stay dark even while the bar is over the hero. */
+  .site-nav .navbar-collapse .nav-link,
+  .site-nav--hero .navbar-collapse .nav-link,
+  .site-nav.is-scrolled .navbar-collapse .nav-link {
+    color: var(--ink);
+    padding: 0.6rem 0.75rem;
+    border-radius: var(--radius);
+  }
+
+  .site-nav .navbar-collapse .nav-link:hover,
+  .site-nav .navbar-collapse .nav-link:focus-visible {
+    color: var(--accent);
+    background: var(--accent-soft);
+  }
+
+  .site-nav .navbar-collapse .nav-link.is-active,
+  .site-nav--hero .navbar-collapse .nav-link.is-active,
+  .site-nav--hero.is-scrolled .navbar-collapse .nav-link.is-active {
+    color: var(--accent);
+    background: var(--accent-soft);
   }
 }
 
